@@ -1,0 +1,30 @@
+package UAS;
+
+import java.util.Scanner; // import scanner
+
+/**
+ * @author "Alif Fatwa Ramadhani"
+ * @since 2 Juni 2021
+ */
+public class UAS { // class
+    /**
+     * Methode ini untuk menghitung nilai faktorial
+     *
+     * @param a Menentukan apakah dalam inputan ada double atau tidak
+     */
+        static int Faktorial (int a){
+            int y = 1; // Variabel
+
+            for (int i = a; i > 0; i--) { // perulangan for = mengulang dari besar ke kecil
+                i *= y; // rumus faktorial
+            }
+            return y; //pengembalian nilai
+        }
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in); // input nilai
+        System.out.print("Masukkan Nilai a :"); // input nilai
+        int a = input.nextInt(); // input nilai
+        System.out.println("Nilai Faktorial "+a+" adalah "+Faktorial(a)); // output
+    }
+}
